@@ -11,12 +11,13 @@ public class Main {
 		network.setActivationFunction("TANH");
 		network.setErrorThreshold(.1);
 		network.setLearningRate(.1);
-		//network.save("reversiNetwork4.txt");
 		network.load("reversiNetwork2.txt");
 		AI computer = new AI(network);
-		//trainNetwork5("reversiNetwork2.txt");
+		
+		//Command that starts the game
+		//Choose how many players and what color 
+		//you would like to be (if single player)
 		g.startGUI(1,"Black",computer);
-		//int a = compare();
 	}
 	
 	public static void trainNetwork(String name) {

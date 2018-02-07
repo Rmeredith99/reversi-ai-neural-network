@@ -146,11 +146,11 @@ public class GUI extends JFrame implements ActionListener{
 	public void startGUI(int players) {
 		numPlayers = players;
 		if (players==1) {
-			NeuralNetwork net = new NeuralNetwork(new int[] {64,64,1});
+			NeuralNetwork net = new NeuralNetwork(new int[] {64,64,64,1});
 			net.setActivationFunction("TANH");
 			net.setErrorThreshold(.1);
 			net.setLearningRate(.1);
-			net.load("reversiNetwork.txt");
+			net.load("reversiNetwork2.txt");
 			AI computer = new AI(net);
 			setAI(computer);
 			humanColor = -1;
